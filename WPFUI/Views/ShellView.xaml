@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFUI.Views"
         mc:Ignorable="d" FontSize="18"
         Title="ShellView" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="-4,0,3.6,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
             <ColumnDefinition Width="auto" />
@@ -26,13 +26,33 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
+        <!--Row1-->
         <TextBlock 
-            Grid.Column="1" Grid.Row="1"
-            Text="{Binding Path=FirstName, Mode=OneWay}">
+            Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"
+            Text="{Binding Path=FullName, Mode=OneWay}">
         </TextBlock>
+        <!--Row2-->
         <TextBox x:Name="FirstName" Grid.Column="1" Grid.Row="2"
                  MinWidth="100">
-            
         </TextBox>
+        <TextBox x:Name="LastName" Grid.Column="2" Grid.Row="2"
+                 MinWidth="100">
+        </TextBox>
+        <!--Row3-->
+        <ComboBox Grid.Row="3" Grid.Column="1" x:Name="People"
+                  SelectedItem="{Binding Path=SelectedPerson, Mode=OneWayToSource}"
+                  DisplayMemberPath="FirstName" />
+        <TextBlock Grid.Row="3" Grid.Column="2" x:Name="SelectedPerson_LastName" />
+        
+        <!--Row4-->
+        <Button x:Name="ClearText" Grid.Row="4" Grid.Column="1">Clear Names</Button>
+        
+        <!--Row5-->
+        <Button x:Name="LoadPageOne" Grid.Row="5" Grid.Column="1">Load First Page</Button>
+        <Button x:Name="LoadPageTwo" Grid.Row="5" Grid.Column="2">Load Second Page</Button>
+
+        <!--Row6-->
+        <ContentControl Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5"
+                        x:Name="ActiveItem"/>
     </Grid>
 </Window>

@@ -48,3 +48,7 @@ D:\UX-project\CMdemo\WPFUI\obj\Debug\WPFUI.csproj.CoreCompileInputs.cache
 D:\UX-project\CMdemo\WPFUI\obj\Debug\WPFUI.csproj.CopyComplete
 D:\UX-project\CMdemo\WPFUI\obj\Debug\WPFUI.exe
 D:\UX-project\CMdemo\WPFUI\obj\Debug\WPFUI.pdb
+D:\UX-project\CMdemo\WPFUI\obj\Debug\Views\FirstChildView.g.cs
+D:\UX-project\CMdemo\WPFUI\obj\Debug\Views\SecondChildView.g.cs
+D:\UX-project\CMdemo\WPFUI\obj\Debug\Views\FirstChildView.baml
+D:\UX-project\CMdemo\WPFUI\obj\Debug\Views\SecondChildView.baml
